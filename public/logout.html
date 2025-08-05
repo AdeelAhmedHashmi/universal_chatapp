@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>LogOut | ChatApp</title>
+        <link rel="stylesheet" href="./src/styles/index.css" />
+    </head>
+    <body>
+        <button>logout</button>
+    </body>
+    <!-- <script src="./src/index.js"></script> -->
+    <script>
+        const btn = document.querySelector("button");
+        btn.addEventListener("click", async (e) => {
+            const res = await fetch("http://localhost:8080/api/user/logout", {
+                method: "POST",
+                credentials: "include",
+            });
+
+            const response = res.json();
+            if (response.status === 200) {
+                localStorage.setItem("redirect_url", "./registeration.html");
+                window.location.href = "redirect.html";
+            }
+        });
+    </script>
+</html>

@@ -1,0 +1,43 @@
+:root {
+    --primary-color: #1f1f2e;
+    --secondary-color: #f1f1f1;
+    --third-color: #6b69707c;
+    --dim-color: rgb(182, 178, 178);
+}
+
+body {
+    font-family: monospace;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.message {
+    max-width: 600px;
+    width: 100%;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: rgb(255, 89, 89); /* Error red */
+    word-spacing: -9px;
+}
+
+p {
+    font-size: 1rem;
+    margin: 0.75rem 0;
+    word-spacing: -3px;
+}
+
+a {
+    color: #ff4f4f;
+    font-weight: bold;
+    text-decoration: underline;
+}

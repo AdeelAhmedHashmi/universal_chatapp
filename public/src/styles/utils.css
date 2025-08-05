@@ -1,0 +1,6 @@
+.hide {
+    display: none !important;
+}
+.invisible {
+    opacity: 0;
+}

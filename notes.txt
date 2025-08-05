@@ -1,0 +1,5 @@
+await MyModel.findByIdAndUpdate(
+  userId,
+  { $addToSet: { numbers: String(789) } }, // will only add if not already present
+  { new: true }
+);

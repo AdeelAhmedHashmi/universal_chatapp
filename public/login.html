@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Login</title>
+        <link rel="stylesheet" href="./src/styles/login.css" />
+    </head>
+    <body>
+        <div class="heading">
+            <h1>WellCome Back to Your Account</h1>
+        </div>
+
+        <div class="container">
+            <div class="login-container">
+                <h2>Login</h2>
+                <div class="login-form">
+                    <div class="input-group">
+                        <input type="text" id="chatId" name="chatId" required />
+                        <label for="chatId">Chat ID</label>
+                    </div>
+
+                    <div class="input-group">
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            required
+                        />
+                        <label for="password">Password</label>
+                    </div>
+
+                    <button>Login</button>
+                    <div class="err"></div>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="./src/asserts/social.png" />
+            </div>
+        </div>
+
+        <div class="option">
+            if you dont have an account
+            <a href="./registeration.html">Register</a> now!
+        </div>
+    </body>
+    <script type="module" src="./src/login.js"></script>
+</html>

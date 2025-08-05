@@ -1,0 +1,33 @@
+:root {
+    --background: rgb(7, 7, 7);
+    --foreground: rgb(241, 236, 236);
+    --e-background: rgb(15, 15, 15);
+    --dim: rgb(15, 15, 15);
+    --transparent-white: rgba(255, 255, 255, 0.137);
+    --transparent-black: rgba(0, 0, 0, 0.164);
+    --primary: rgb(20, 143, 55);
+    --secondary: #0a822c;
+    --light-shadow: rgba(255, 255, 255, 0.226);
+    --dark-shadow: rgb(0, 0, 0);
+    --scroll: rgba(197, 193, 193, 0.253);
+    --self-msg: rgb(5, 112, 46);
+    --other-msg: rgb(26, 25, 25);
+    --dim-fontcolor: rgb(77, 77, 77);
+    --wrong: red;
+}
+
+.light-theme {
+    --background: rgb(235, 235, 235);
+    --foreground: rgb(0, 0, 0);
+    --e-background: rgb(219, 219, 219);
+    --dim: rgb(214, 214, 214);
+    --transparent-white: rgba(255, 255, 255, 0.137);
+    --transparent-black: rgba(0, 0, 0, 0.164);
+    --primary: rgb(20, 143, 55);
+    --secondary: #0a822c;
+    --light-shadow: rgb(255, 255, 255);
+    --dark-shadow: rgba(0, 0, 0, 0.199);
+    --scroll: rgba(197, 193, 193, 0.253);
+    --self-msg: rgb(5, 112, 46);
+    --other-msg: rgb(53, 53, 53);
+}

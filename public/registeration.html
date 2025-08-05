@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>User Registration - Chat App</title>
+        <link rel="stylesheet" href="./src/styles/register.css" />
+    </head>
+    <body>
+        <h1>User Registeration</h1>
+        <div class="container">
+            <div class="form">
+                <label for="username">Username:</label><br />
+                <input type="text" id="username" name="username" required />
+                <br /><br />
+
+                <label for="chatid">Chat ID:</label><br />
+                <input
+                    type="text"
+                    id="chatid"
+                    name="chatid"
+                    required
+                /><br /><br />
+
+                <label for="password">Password:</label><br />
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    required
+                /><br /><br />
+
+                <button type="submit">Register</button>
+                <div class="err"></div>
+                <div class="message hide">you are successfully register!</div>
+            </div>
+            <div class="image-container">
+                <img src="./src/asserts/social.png" />
+            </div>
+        </div>
+
+        <div class="note">
+            <div>
+                <div>
+                    <strong>Note:</strong>
+                    Chat ID must contain hyphens (<code>-</code>) after every
+                    4-digit segment, and must include exactly three segments.
+                    <br />
+                    <strong>Examples:</strong><br />
+                    <span class="allowed">Allowed:</span>
+                    <code>2324-2432-2432</code>, <code>2342-2344-2344</code>
+                    <span class="not-allowed">Not Allowed:</span>
+                    <code>23423-2344-2342</code>, <code>3233-23421-2323</code>,
+                    <code>23as-2344d-2344</code>
+                </div>
+            </div>
+        </div>
+
+        <div class="option">
+            if you already have an account
+            <a href="./login.html">login</a> here!
+        </div>
+
+        <script type="module" src="./src/register.js"></script>
+    </body>
+</html>

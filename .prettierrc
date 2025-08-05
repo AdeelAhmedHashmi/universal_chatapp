@@ -1,0 +1,9 @@
+{
+    "tabWidth": 4,
+    "endOfLine": "lf",
+    "bracketSpacing": true,
+    "objectWrap": "collapse",
+    "singleQuote": false,
+    "useTabs": false,
+    "semi": true
+}

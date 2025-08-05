@@ -1,0 +1,173 @@
+/* ./src/styles/register.css */
+
+@import url("./utils.css");
+:root {
+    --primary-color: #1f1f2e;
+    --secondary-color: #f1f1f1;
+    --third-color: #6b69707c;
+    --dim-color: rgb(182, 178, 178);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.option {
+    padding: 4px;
+    font-size: 0.8rem;
+    width: 100vw;
+    text-align: center;
+    background-color: #2e2e3f62;
+    position: fixed;
+    bottom: 0%;
+    backdrop-filter: blur(10px);
+}
+.option a {
+    color: rgb(102, 76, 173);
+}
+h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    text-shadow: 1px 1px 5px var(--third-color);
+}
+
+.container {
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.image-container {
+    max-width: 400px;
+    width: 100%;
+    padding: 40px;
+}
+.image-container img {
+    width: 50vmin;
+    height: 100%;
+    scale: 1.4;
+}
+.form {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+    width: 90%;
+    max-width: 400px;
+}
+
+label {
+    font-weight: bold;
+    color: var(--dim-color);
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-radius: 8px;
+    background-color: #2e2e3f;
+    color: var(--secondary-color);
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--dim-color);
+    color: var(--primary-color);
+}
+
+.err,
+.message {
+    transform: translateY(20px);
+}
+.err {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #ff7f7f;
+}
+.message {
+    font-size: 0.7rem;
+    color: rgb(46, 250, 46);
+}
+
+/* >>>>>>>>>>> Note Section >>>>>>>>>> */
+
+.note {
+    padding-top: 15px;
+    padding-left: 20px;
+    border-radius: 12px;
+    color: var(--dim-color);
+    font-size: 0.7rem;
+    line-height: 1.3;
+}
+
+.note strong {
+    color: var(--secondary-color);
+    font-size: 0.7rem;
+}
+
+.note ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.note li {
+    margin-bottom: 12px;
+}
+
+.note code {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+    color: #c3c6ff;
+}
+
+.allowed {
+    color: #7fff7f;
+    font-weight: bold;
+}
+
+.not-allowed {
+    color: #ff7f7f;
+    font-weight: bold;
+}
+
+@media (max-width: 791px) {
+    .image-container {
+        display: none;
+    }
+}

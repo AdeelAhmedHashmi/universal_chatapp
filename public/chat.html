@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <title>Socket.IO chat</title>
+        <link rel="stylesheet" href="./src/styles/style.css" />
+        <!-- // google icon library -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+            integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <div class="loading hide">loading....</div>
+            <div class="err hide">
+                <div class="title">Validation Error</div>
+                <div class="content">user validation failed!</div>
+            </div>
+            <div class="new-contact hide">
+                <div class="title">
+                    <h3>New Contact</h3>
+                    <i class="fa-regular fa-circle-xmark"></i>
+                </div>
+                <form method="POST">
+                    <div class="fields name">
+                        <input
+                            type="text"
+                            name="contactname"
+                            id="nameInput"
+                            placeholder="contact name"
+                        />
+                    </div>
+                    <div class="fields chatid">
+                        <input
+                            type="text"
+                            name="chatid"
+                            ,
+                            id="chatidInput"
+                            placeholder="xxxx-xxxx-xxxx"
+                        />
+                    </div>
+                    <div class="fields submit-button">
+                        <button type="submit" id="add-contact-btn">add</button>
+                    </div>
+                </form>
+            </div>
+            <div class="popup hide">
+                <h2>Profile Settings</h2>
+
+                <!-- Form Starts -->
+                <form id="profileForm" enctype="multipart/form-data">
+                    <!-- Profile Picture Display + Upload -->
+                    <div class="profile-pic">
+                        <img src="" alt="Profile Picture" id="profileImage" />
+                        <label for="upload">
+                            <i class="fas fa-camera"></i>
+                        </label>
+                        <input
+                            type="file"
+                            id="upload"
+                            name="profilePic"
+                            accept="image/*"
+                            style="display: none"
+                        />
+                    </div>
+
+                    <div class="input-group">
+                        <label for="username">Username</label>
+                        <input
+                            type="text"
+                            id="username"
+                            name="username"
+                            placeholder="Edit username"
+                            required
+                        />
+                    </div>
+
+                    <div class="theme-toggle">
+                        <label>Toggle Theme</label>
+                        <label class="switch">
+                            <input type="checkbox" id="themeSwitch" />
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="popup-actions">
+                        <button type="button" class="btn cancel">Cancel</button>
+                        <button type="submit" class="btn save">Save</button>
+                    </div>
+                </form>
+                <!-- Form Ends -->
+            </div>
+
+            <div class="left">
+                <div class="upper">
+                    <div class="back">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </div>
+                    <div class="title"></div>
+                    <div class="search">
+                        <div id="searchBox">
+                            <input
+                                id="search-input"
+                                type="text"
+                                placeholder="search..."
+                            />
+                            <button id="searchBtn">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </div>
+                        <div class="addPeopleBox">
+                            <button id="plus" class="hide">New contacts</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="lower">
+                    <div id="peopleList" class="list">
+                        <!-- <div class="item">
+                            <div class="username">fazal</div>
+                            <div class="chatid">1111-1111-1111</div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="chatBox">
+                <div class="topbar">
+                    <div class="leftbar sider">
+                        <i class="fa-solid fa-list-ul"></i>
+                    </div>
+                    <div class="toggleBar">
+                        <i class="fas fa-users"></i>
+                        <!-- <i class="fas fa-comment-dots"></i> -->
+                    </div>
+                    <div class="mid">
+                        <h2></h2>
+                    </div>
+                    <div class="rightbar sider">
+                        <i class="fa-regular fa-user"></i>
+                    </div>
+                </div>
+                <div class="messages">
+                    <div class="messages-background"></div>
+                </div>
+                <div id="form">
+                    <div class="emojiBox">
+                        <div class="search-emoji">
+                            <input type="text" placeholder="search emoji.." />
+                        </div>
+                        <div class="emojis"></div>
+                    </div>
+                    <textarea
+                        id="input"
+                        autocomplete="off"
+                        title="type message here"
+                        placeholder="your message..."
+                    ></textarea>
+                    <button>
+                        <i class="sendBtn fa-regular fa-circle-right"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="right">
+                <div class="upper">
+                    <div class="back">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </div>
+                    <div class="title">Profile</div>
+                    <div class="profile">
+                        <div class="profile-image">
+                            <img src="./src/asserts/profile.png" alt="" />
+                        </div>
+                        <div class="info">
+                            <div class="user-info">
+                                <div class="username"></div>
+                                <div class="chatid"></div>
+                            </div>
+                            <div class="edit-info">
+                                <div class="edit-btn">
+                                    <button>
+                                        <i class="fas fa-pen"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="lower">
+                    <h3>Setting</h3>
+                    <button><i class="fas fa-gear"></i></button>
+                </div>
+            </div>
+        </div>
+        <script type="module" src="./src/dom/chatPage/script.js"></script>
+        <script type="module" src="./src/script.js"></script>
+    </body>
+</html>

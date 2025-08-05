@@ -1,0 +1,31 @@
+import { WebSocketServer } from "ws";
+import { v1 as uuidv1 } from "uuid";
+import server from "../index.js";
+
+const wss = new WebSocketServer({ server });
+
+wss.on("connection", (ws) => {
+    console.log("Client connected");
+    console.log("Server : ", ws);
+
+    ws.on("message", (Usermessage) => {
+        console.log(`Received: ${Usermessage}`);
+        const message = JSON.parse(Usermessage);
+        wss.clients.forEach((client) => {
+            if (client.readyState === 1 && client !== ws) {
+                client.send(
+                    JSON.stringify({
+                        name: message.name,
+                        message: message.message,
+                    })
+                );
+            }
+        });
+    });
+
+    console.log("Clients connected:", wss.clients.size);
+
+    ws.on("close", () => {
+        console.log("Client disconnected");
+    });
+});

@@ -1,0 +1,15 @@
+<i class="fa-regular fa-user"></i>
+
+<i class="fa-solid fa-list-ul"></i>
+
+<i class="fa-solid fa-comment-dots"></i>
+
+<i class="fa-solid fa-share-nodes"></i>
+
+<i class="fa-solid fa-users-line"></i>
+
+<i class="fa-solid fa-arrow-right"></i>
+
+<i class="fa-solid fa-arrow-left"></i>
+
+<i class="fa-solid fa-plus"></i>

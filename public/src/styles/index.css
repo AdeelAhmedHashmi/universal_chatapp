@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #1f1f2e;
+    --secondary-color: #f1f1f1;
+    --third-color: #6b69707c;
+    --dim-color: rgb(182, 178, 178);
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    gap: 20px;
+}
+button {
+    padding: 10px 20px;
+    background-image: linear-gradient(
+        rgb(0, 4, 255),
+        rgba(101, 109, 101, 0.158)
+    );
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 900;
+    box-shadow: 0 0 20px 10px rgb(221, 216, 216);
+}

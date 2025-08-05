@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Redirecting...</title>
+        <link rel="stylesheet" href="./src/styles/redirect.css" />
+    </head>
+    <body>
+        <div class="message">
+            <h1>Congratulation! Operation Successfull</h1>
+            <p>You are being redirected to the main page.</p>
+            <p>
+                If you are not redirected automatically,
+                <a href="">click here</a>.
+            </p>
+        </div>
+    </body>
+    <script>
+        const url = localStorage.getItem("redirect_url");
+        document.querySelector("a").href = url;
+
+        setTimeout(() => {
+            window.location.href = url;
+            localStorage.removeItem("redirect_url");
+        }, 3000);
+    </script>
+</html>
