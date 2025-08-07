@@ -29,11 +29,11 @@ A professional, full-stack real-time social chat application with modern UI/UX, 
 
 -   ✅ **Real-time messaging** using WebSockets
 -   🔒 **JWT-based authentication**
--   👥 **Group and private chat**
--   🖼️ **Image & media sharing**
--   🔔 **Typing indicators**
--   👀 **Online/offline status**
+-   👥 **Global chat**
 -   🎨 **Dark mode/ light mode toggle**
+-   👤 **profile upload / browser**
+-   ☎️ **add / delete Contacts**
+-   ✉️ **draft messages**
 -   📱 **Responsive design (Mobile + Desktop)**
 
 ## Demo Features:
