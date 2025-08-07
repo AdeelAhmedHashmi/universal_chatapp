@@ -1,13 +1,6 @@
-Sure Adeel! Here's the **full professional `README.md`** for your **Real-Time Social ChatApp**, optimized for GitHub.
-It includes: project overview, features, images, tech stack, setup guide, usage, and more.
-
----
-
-### 📄 `README.md`
-
 # 🚀 Real-Time Social ChatApp
 
-A professional, full-stack real-time social chat application with modern UI/UX, user authentication, group & private messaging, media sharing, and WebSocket-based live chat — built for performance, scalability, and clean code architecture.
+A professional, full-stack real-time social chat application with modern UI/UX, user authentication, global messaging, profile upload, and WebSocket-based live chat — built for performance, scalability, and clean code architecture.
 
 ![Banner](./asserts/Screenshot_7-8-2025_115511_localhost.jpeg)
 
@@ -114,7 +107,7 @@ src/
 ├── app.js
 └── index.js
 
-
+````
 ---
 
 ## ⚙️ Installation & Setup
@@ -122,9 +115,9 @@ src/
 ### 1. Clone the Repo
 
 ```bash
-git clone https://github.com/AdeelAhmedHashmi/fullstack-chatapp.git
-cd fullstack-chatapp
-````
+git clone https://github.com/AdeelAhmedHashmi/universal_chatapp
+cd universal_chatapp
+```
 
 ### 2. Install Backend Dependencies
 
@@ -146,7 +139,7 @@ CLOUDINARY_API_SECRET=your_api_secret
 ### 4. Run the Server
 
 ```bash
-npm start
+npm run dev
 ```
 
 ### 5. Open Frontend
