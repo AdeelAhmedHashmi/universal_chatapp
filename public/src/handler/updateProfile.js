@@ -11,7 +11,6 @@ const { updateForm } = DOM; // profile update form
 const updateProfile = async (e) => {
     e.preventDefault();
     const validation = formValidation(updateForm);
-    console.log(validation);
     if (!validation) {
         showlog(
             "Validation Err: ",

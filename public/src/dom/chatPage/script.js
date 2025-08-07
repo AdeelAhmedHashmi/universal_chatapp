@@ -6,9 +6,10 @@ import sliders from "./sliders.js";
 import filePreviewer from "./filePreviewer.js";
 import { toggleChatType } from "./changeChat.js";
 import "./Emojis.js";
+import "./setPrivateChatInfo.js";
+import "./theme.js";
 
 const Toggler = new _Toggler();
-const Theme = new _Theme();
 const {
     leftMenuBar,
     leftMenuBackIcon,
@@ -19,12 +20,11 @@ const {
     rightMenuBackIcon,
     newContactCloseButton,
     newContactAddButton,
+    chatTypeToggleBtn,
 } = DOM;
 
-searchFilter();
 sliders();
 filePreviewer();
-toggleChatType();
 
 function showhideMenuBackBtn() {
     if (getComputedStyle(leftMenuBar).position === "absolute") {
@@ -48,3 +48,7 @@ addPeopleIcon.onclick = () => Toggler.togglePopup(DOM.addNewContactPopup);
 newContactCloseButton.onclick = () =>
     Toggler.togglePopup(DOM.addNewContactPopup);
 newContactAddButton.onclick = () => Toggler.togglePopup(DOM.addNewContactPopup);
+chatTypeToggleBtn.onclick = () => {
+    const chatType = localStorage.getItem("chat_type");
+    toggleChatType({ toggle: chatType, messages: null });
+};

@@ -1,27 +1,34 @@
 import express from "express";
 import {
+    listContact,
     newContact,
     updateUser,
     userLogin,
     userLogout,
     userRegister,
     UserVerification,
+    deleteContact,
 } from "../controllers/user.controller.js";
 import avatarUpload from "../middlewares/multer.middleware.js";
 import verifyUser from "../middlewares/auth.middleware.js";
-import multer from "multer";
 
 const userRouter = express.Router();
-userRouter.post("/register", avatarUpload.single("avatar"), userRegister);
+userRouter.post("/register", avatarUpload.none(), userRegister);
 userRouter.post("/login", avatarUpload.none(), userLogin);
 userRouter.post("/logout", verifyUser, userLogout);
-userRouter.route("/verify").get(verifyUser, UserVerification);
+userRouter.get("/verify", verifyUser, UserVerification);
 userRouter.post(
     "/update",
     verifyUser,
     avatarUpload.single("profilePic"),
     updateUser
 );
-userRouter.post("/contact", verifyUser, newContact);
+
+userRouter
+    .route("/contact")
+    .post(verifyUser, newContact)
+    .get(verifyUser, listContact);
+
+userRouter.post("/deletecontact", verifyUser, deleteContact);
 
 export default userRouter;

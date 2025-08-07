@@ -231,6 +231,52 @@ const newContact = async (req, res) => {
         res.status(500).json({ message: err.message });
     }
 };
+
+const listContact = async (req, res) => {
+    if (!req.user)
+        return res.status(401).json({ message: "User not authorized!" });
+
+    const id = req.user;
+    try {
+        const contacts = await Contact.find({ user: id });
+        if (!contacts)
+            return res.status(200).json({ message: "successfully!", data: [] });
+
+        return res
+            .status(200)
+            .json({ message: "successfull!", data: contacts });
+    } catch (err) {
+        return res.status(500).json({
+            message: err.message,
+        });
+    }
+};
+
+const deleteContact = async (req, res) => {
+    console.log(req.body);
+    if (!req.user)
+        return res.status(401).json({ message: "User not authorized!" });
+    if (!req.body.contact)
+        return res.status(401).json({ message: "Contact id is required!" });
+
+    const { contact } = req.body;
+    console.log("form User: ", contact);
+    try {
+        const deletedNumber = await Contact.findOneAndDelete({
+            number: contact,
+        });
+        console.log("deleted: ", deleteContact);
+        if (!deletedNumber)
+            return res.status(500).json({ message: "Contact not deleted!" });
+
+        return res.status(200).json({
+            message: "Contact deleted successfully!",
+            data: deleteContact,
+        });
+    } catch (err) {
+        return res.status(500).json({ message: err.message });
+    }
+};
 export {
     userRegister,
     userLogin,
@@ -238,4 +284,6 @@ export {
     UserVerification,
     updateUser,
     newContact,
+    listContact,
+    deleteContact,
 };

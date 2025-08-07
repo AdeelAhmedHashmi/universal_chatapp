@@ -1,4 +1,3 @@
-import verifyUser from "./handler/verifyUser.handler.js";
 import onmessageHandler from "./socket/onmessage.js";
 import onopenHandler from "./socket/onopen.js";
 

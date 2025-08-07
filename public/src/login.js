@@ -24,7 +24,6 @@ async function sendLoginCredentials(chatId, password) {
     }
 }
 
-// console.log(DOM);
 loginBtn.addEventListener("click", (e) => {
     e.preventDefault();
     const chatId = chatIdInputField.value.trim();
@@ -50,7 +49,6 @@ loginBtn.addEventListener("click", (e) => {
     }
 
     response.then((response) => {
-        console.log(response, response.status);
         if (response.status === 200) {
             localStorage.setItem("redirect_url", "./chat.html");
             setTimeout(() => {

@@ -14,7 +14,8 @@ let vars = {
         login: `http://localhost:8080/api/user/login`,
         logout: `http://localhost:8080/api/user/logout`,
         verify: `http://localhost:8080/api/user/verify`,
-        numbers: `http://localhost:8080/api/user/usernumbers`,
+        numbers: `http://localhost:8080/api/user/contact`,
+        deleteContact: `http://localhost:8080/api/user/deletecontact`,
         updateProfile: `http://localhost:8080/api/user/update`,
     },
 };

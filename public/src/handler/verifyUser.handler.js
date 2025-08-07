@@ -7,6 +7,7 @@ async function verifyUser() {
             credentials: "include",
         });
         const response = await res.json();
+        console.log("Verify User Started!");
         if (res.status === 200) {
             return {
                 status: "Success",

@@ -49,6 +49,10 @@ let DOM = {
     ),
     newContactAddButton: document.querySelector(".new-contact form button"),
     newContactCloseButton: document.querySelector(".new-contact .title i"),
+    chatTypeIndicator: document.querySelector(".topbar .toggleBar"),
+    chatTypeToggleBtn: document.querySelector(
+        ".container .right .upper .title button"
+    ),
 };
 
 export default DOM;
