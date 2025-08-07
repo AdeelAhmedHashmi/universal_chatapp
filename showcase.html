@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Project ShowCase</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                min-height: 100vh;
+                background-color: #212121;
+            }
+            .gallery {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100vw;
+                padding: 10px;
+                row-gap: 30px;
+            }
+            .mobile {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+            }
+            .mobile img {
+                border: 5px solid rgb(73, 70, 70);
+                border-radius: 10px;
+                box-shadow: 0 0 20px;
+            }
+
+            .desktop {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 30px;
+            }
+            .desktop img {
+                border: 5px solid rgb(73, 70, 70);
+                border-radius: 10px;
+                box-shadow: 0 0 20px;
+                width: 650px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="gallery">
+            <div class="mobile">
+                <img src="./asserts/screenshot-1754549955350.png" alt="" />
+                <img src="./asserts/screenshot-1754549980171.png" alt="" />
+                <img src="./asserts/screenshot-1754550018656.png" alt="" />
+                <img src="./asserts/screenshot-1754550050230.png" alt="" />
+            </div>
+            <div class="desktop">
+                <img
+                    src="./asserts/Screenshot_7-8-2025_114736_127.0.0.1.jpeg"
+                    alt=""
+                />
+                <img
+                    src="./asserts/Screenshot_7-8-2025_11475_127.0.0.1.jpeg"
+                    alt=""
+                />
+                <img
+                    src="./asserts/Screenshot_7-8-2025_115511_localhost.jpeg"
+                    alt=""
+                />
+                <img
+                    src="./asserts/Screenshot_7-8-2025_115638_localhost.jpeg"
+                    alt=""
+                />
+                <img
+                    src="./asserts/Screenshot_7-8-2025_12131_localhost.jpeg"
+                    alt=""
+                />
+            </div>
+        </div>
+    </body>
+    <script></script>
+</html>
